@@ -1,1 +1,1 @@
-# nextpnr-pcsclkdiv-issue
+run `make`
