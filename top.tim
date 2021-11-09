@@ -1,0 +1,117 @@
+
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:        26/83640     0%
+Info:         logic LUTs:      0/83640     0%
+Info:         carry LUTs:     26/83640     0%
+Info:           RAM LUTs:      0/41820     0%
+Info:          RAMW LUTs:      0/20910     0%
+
+Info:      Total DFFs:        52/83640     0%
+
+Info: Packing IOs..
+Info: pin 'led_0__io$tr_io' constrained to Bel 'X78/Y0/PIOB'.
+Info: Packing constants..
+Info: Packing carries...
+Info: Finding LUTFF pairs...
+Info: Packing LUT5-7s...
+Info: Finding LUT-LUT pairs...
+Info: Packing paired LUTs into a SLICE...
+Info: Packing unpaired LUTs into a SLICE...
+Info: Packing unpaired FFs into a SLICE...
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net tx_clk_div to global network
+Info: Checksum: 0x9752e489
+
+Info: Annotating ports with timing budgets for target frequency 12.00 MHz
+Info: Checksum: 0xf3b52bae
+
+Info: Device utilisation:
+Info: 	       TRELLIS_SLICE:    17/41820     0%
+Info: 	          TRELLIS_IO:     1/  365     0%
+Info: 	                DCCA:     1/   56     1%
+Info: 	              DP16KD:     0/  208     0%
+Info: 	          MULT18X18D:     0/  156     0%
+Info: 	              ALU54B:     0/   78     0%
+Info: 	             EHXPLLL:     0/    4     0%
+Info: 	             EXTREFB:     0/    2     0%
+Info: 	                DCUA:     1/    2    50%
+Info: 	           PCSCLKDIV:     1/    2    50%
+Info: 	             IOLOGIC:     0/  224     0%
+Info: 	            SIOLOGIC:     0/  141     0%
+Info: 	                 GSR:     0/    1     0%
+Info: 	               JTAGG:     0/    1     0%
+Info: 	                OSCG:     0/    1     0%
+Info: 	               SEDGA:     0/    1     0%
+Info: 	                 DTR:     0/    1     0%
+Info: 	             USRMCLK:     0/    1     0%
+Info: 	             CLKDIVF:     0/    4     0%
+Info: 	           ECLKSYNCB:     0/   10     0%
+Info: 	             DLLDELD:     0/    8     0%
+Info: 	              DDRDLL:     0/    4     0%
+Info: 	             DQSBUFM:     0/   14     0%
+Info: 	     TRELLIS_ECLKBUF:     0/    8     0%
+Info: 	        ECLKBRIDGECS:     0/    2     0%
+Info: 	                DCSC:     0/    2     0%
+
+Info: Placed 2 cells based on constraints.
+Info: Creating initial analytic placement for 4 cells, random placement wirelen = 461.
+Info:     at initial placer iter 0, wirelen = 206
+Info:     at initial placer iter 1, wirelen = 154
+Info:     at initial placer iter 2, wirelen = 132
+Info:     at initial placer iter 3, wirelen = 128
+Info: Running main analytical placer.
+Info:     at iteration #1, type TRELLIS_SLICE: wirelen solved = 128, spread = 131, legal = 146; time = 0.00s
+Info:     at iteration #1, type PCSCLKDIV: wirelen solved = 141, spread = 141, legal = 323; time = 0.01s
+Info:     at iteration #1, type ALL: wirelen solved = 204, spread = 204, legal = 240; time = 0.00s
+Info: HeAP Placer Time: 0.04s
+Info:   of which solving equations: 0.00s
+Info:   of which spreading cells: 0.01s
+Info:   of which strict legalisation: 0.00s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 7, wirelen = 240
+Info:   at iteration #5: temp = 0.000000, timing cost = 7, wirelen = 222
+Info:   at iteration #5: temp = 0.000000, timing cost = 7, wirelen = 222 
+Info: SA placement time 0.00s
+
+Info: Max frequency for clock '$glbnet$tx_clk_div': 504.80 MHz (PASS at 12.00 MHz)
+
+Info: Max delay posedge $glbnet$tx_clk_div -> <async>: 1.39 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 81352,  81397) |*** 
+Info: [ 81397,  81442) |** 
+Info: [ 81442,  81487) |** 
+Info: [ 81487,  81532) |** 
+Info: [ 81532,  81577) |** 
+Info: [ 81577,  81622) |** 
+Info: [ 81622,  81667) |** 
+Info: [ 81667,  81712) |** 
+Info: [ 81712,  81757) |*** 
+Info: [ 81757,  81802) |** 
+Info: [ 81802,  81847) |** 
+Info: [ 81847,  81892) | 
+Info: [ 81892,  81937) | 
+Info: [ 81937,  81982) |* 
+Info: [ 81982,  82027) |* 
+Info: [ 82027,  82072) | 
+Info: [ 82072,  82117) | 
+Info: [ 82117,  82162) | 
+Info: [ 82162,  82207) | 
+Info: [ 82207,  82252) |* 
+Info: Checksum: 0x5ae33563
+Info: Routing globals...
+Info:     routing clock net $glbnet$tx_clk_div using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 73 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Warning: Failed to find a route for arc 0 of net tx_clk_div.
+ERROR: Routing design failed.
+1 warning, 1 error
